@@ -22,8 +22,8 @@
 </head>
 
 <body>
-   <!-- Video background -->
-   <video id="videoBackground" autoplay loop muted playsinline>
+  <!-- video tag for bacground -->
+  <video id="videoBackground" autoplay loop muted playsinline>
     <source src="./assets/bacground video/background.mp4" type="video/mp4">
   </video>
  <!-- audio tag added -->
@@ -46,13 +46,18 @@
     </div>
 
   </section>
+  <!-- added date display before weather card and city name -->
+
+  <h1 id="dateDisplay"></h1>
+  <div id="weatherContainer">
+  </div>
+  </section>
   <main>
-    
-    <button id="fetchButton" class="button is-light mt-5 mb-5 is-large ml-5">Find me recipes!</button>
+    <button id="fetchButton" class="button is-info mt-5 mb-5 is-large ml-5">Find me recipes!</button>
     <!-- added date display before weather card and city name -->
     <div>
+
       <h1 id="dateDisplay"></h1>
-      
       <div id="weatherContainer">
       </div>
       <!--recipe cards in a slider  -->
@@ -64,20 +69,22 @@
               <!-- recipe one -->
               <li class="glide__slide">
                 <div class="column">
-                  <div class="card ml-5">
+
+                  <div class="card recipe-card ml-5">
                     <div class="card-image has-text-centered">
                       <figure class="image is-128x128 is-inline-block mt-5">
-                        <img class="" src="assets/images/ice-cream-cloud.jpg" alt="Placeholder image">
+                        <img class="recipe-pic" src="assets/images/pexels-malidate-van-784632_720.jpg" alt="Placeholder image">
                       </figure>
                     </div>
                     <div class="card-content">
                       <div class="media">
                         <div class="media-content">
-                          <p class="title is-4">Recipe One</p>
+
+                          <a title="_blank" class="title is-4" href="">Recipe One</a>
                         </div>
                       </div>
                       <div class="content">
-                        Recipe description <a>@tasty</a>.
+                        <span>Recipe description <a>@tasty</a>.</span>
                         <a href="#">#tasty</a>
                         <br>
                         <div class="card">
@@ -93,22 +100,22 @@
               <!-- recipe two -->
               <li class="glide__slide">
                 <div class="column">
-                  <div class="card">
+                  <div class="card recipe-card">
                     <div class="card-image">
                       <div class="card-image has-text-centered">
                         <figure class="image is-128x128 is-inline-block mt-5">
-                          <img class="" src="assets/images/pexels-karolina-grabowska-4021874_720.jpg"
+                          <img class="recipe-pic" src="assets/images/pexels-karolina-grabowska-4021874_720.jpg"
                             alt="Placeholder image">
                         </figure>
                       </div>
                       <div class="card-content">
                         <div class="media">
                           <div class="media-content">
-                            <p class="title is-4">Recipe Two</p>
+                            <a title = "_blank" class="title is-4">Recipe Two</a>
                           </div>
                         </div>
                         <div class="content">
-                          Recipe description <a>@tasty</a>.
+                          <span>Recipe description <a>@tasty</a>.</span>
                           <a href="#">#tasty</a>
                           <br>
                           <div class="card">
@@ -124,22 +131,22 @@
               <li class="glide__slide">
                 <!-- recipe three -->
                 <div class="column">
-                  <div class="card">
+                  <div class="card recipe-card">
                     <div class="card-image">
                       <div class="card-image has-text-centered">
                         <figure class="image is-128x128 is-inline-block mt-5">
-                          <img class="" src="assets/images/pexels-serhat-tug__-16931491_720.jpg"
+                          <img class="recipe-pic" src="assets/images/pexels-serhat-tug__-16931491_720.jpg"
                             alt="Placeholder image">
                         </figure>
                       </div>
                       <div class="card-content">
                         <div class="media">
                           <div class="media-content">
-                            <p class="title is-4">Recipe Three</p>
+                            <a title="_blank" class="title is-4">Recipe Three</a>
                           </div>
                         </div>
                         <div class="content">
-                          Recipe description <a>@tasty</a>.
+                          <span>Recipe description <a>@tasty</a>.</span>
                           <a href="#">#tasty</a>
                           <br>
                           <div class="card">
@@ -155,21 +162,21 @@
               <!-- recipe four -->
               <li class="glide__slide">
                 <div class="column">
-                  <div class="card mr-5">
+                  <div class="card recipe-card mr-5">
                     <div class="card-image">
                       <div class="card-image has-text-centered">
                         <figure class="image is-128x128 is-inline-block mt-5">
-                          <img class="" src="assets/images/pexels-tessa-k-896673_720.jpg" alt="Placeholder image">
+                          <img class="recipe-pic" src="assets/images/pexels-tessa-k-896673_720.jpg" alt="Placeholder image">
                         </figure>
                       </div>
                       <div class="card-content">
                         <div class="media">
                           <div class="media-content">
-                            <p class="title is-4">Recipe Four</p>
+                            <a target="_blank" class="title is-4">Recipe Four</a>
                           </div>
                         </div>
                         <div class="content">
-                          Recipe description <a>@tasty</a>.
+                          <span>Recipe description <a>@tasty</a>.</span>
                           <a href="#">#tasty</a>
                           <br>
                           <div class="card">
@@ -183,13 +190,15 @@
                   </div>
               </li>
             </ul>
-            <div class="glide__arrows" data-glide-el="controls">
-              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+            <div class="glide__bullets" data-glide-el="controls[nav]">
+              <button class="glide__bullet" data-glide-dir="=0"></button>
+              <button class="glide__bullet" data-glide-dir="=1"></button>
+              <button class="glide__bullet" data-glide-dir="=2"></button>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </div>
   </main>
 
